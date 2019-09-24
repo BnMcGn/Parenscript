@@ -30,6 +30,7 @@
    #:*ps-read-function*
    #:ps-compile-file
    #:ps-compile-stream
+   #:ps-macro-function
    ;; for parenscript macro definition within lisp
    #:defpsmacro
    #:defmacro+ps

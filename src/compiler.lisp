@@ -136,6 +136,12 @@ block.")
 (defvar *macro-toplevel* (make-macro-dictionary)
   "Toplevel macro environment dictionary.")
 
+(defun ps-macro-function (name)
+  (gethash name *macro-toplevel*))
+
+(defsetf ps-macro-function (name) (newfunc)
+  `(setf (gethash ,name *macro-toplevel*) ,newfunc))
+
 (defvar *macro-env* (list *macro-toplevel*)
   "Current macro environment.")
 
